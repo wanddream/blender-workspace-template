@@ -1,0 +1,70 @@
+{
+  "name": "skill-dev-driver",
+  "version": "1.0.0",
+  "author": "YYCLink",
+  "description": "开发驾驶元技能 - 记住项目目标、历史和解决方案，并可调度其他领域技能。",
+  "triggerKeywords": ["继续", "下一步", "历史", "进度", "之前", "昨天", "上次", "架构", "设计", "规划", "路线", "怎么做", "如何开始", "错误", "bug", "问题", "失败", "报错", "异常", "解决"],
+  "skills": [
+    {
+      "id": "core-driving",
+      "name": "核心驾驶",
+      "path": "./skills/core-driving/SKILL.md",
+      "description": "理解项目目标，规划开发路线，提供技术选型建议。",
+      "triggerKeywords": ["架构", "设计", "规划", "路线", "怎么做", "如何开始", "技术选型", "方案"],
+      "tokenCost": "~2000"
+    },
+    {
+      "id": "project-memory",
+      "name": "项目记忆",
+      "path": "./skills/project-memory/SKILL.md",
+      "description": "记录项目历史进度，支持上下文感知的任务继续。",
+      "triggerKeywords": ["继续", "下一步", "历史", "进度", "之前", "昨天", "上次", "接着", "然后"],
+      "tokenCost": "~2000"
+    },
+    {
+      "id": "solution-library",
+      "name": "解决方案库",
+      "path": "./skills/solution-library/SKILL.md",
+      "description": "积累项目中的问题 - 解决方案对照表，遇到相似问题时自动推荐。",
+      "triggerKeywords": ["错误", "bug", "问题", "失败", "报错", "异常", "解决", "修复", "搞定"],
+      "tokenCost": "~2000"
+    }
+  ],
+  "externalSkills": [
+    {
+      "id": "miniprogram-ecosystem",
+      "name": "小程序生态",
+      "path": "../skill-miniprogram-ecosystem/SKILL.md",
+      "description": "小程序多平台开发（微信/抖音/支付宝）。",
+      "triggerKeywords": ["小程序", "微信", "抖音", "支付宝"],
+      "tokenCost": "~3000"
+    },
+    {
+      "id": "thesis-writer",
+      "name": "论文写作",
+      "path": "../skill-thesis-writer/SKILL.md",
+      "description": "跨学科 AI 论文写作助手。",
+      "triggerKeywords": ["论文", "学术", "写作", "文献"],
+      "tokenCost": "~4000"
+    },
+    {
+      "id": "product-manager",
+      "name": "产品经理",
+      "path": "../skill-product-manager/SKILL.md",
+      "description": "通用产品经理拷打技能。",
+      "triggerKeywords": ["产品", "评审", "需求", "功能"],
+      "tokenCost": "~4000"
+    }
+  ],
+  "context": {
+    "projectGoal": ".yyclink/context/project-goal.md",
+    "currentState": ".yyclink/context/current-state.md",
+    "solutions": ".yyclink/context/solutions.md"
+  },
+  "tokenOptimization": {
+    "baseTokenCost": "~700",
+    "skillLoadCost": "~2000",
+    "maxTokenCost": "~4700",
+    "savingsRate": "90%+"
+  }
+}
